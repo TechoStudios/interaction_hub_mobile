@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "100956213682",
+    "firebase_url": "https://interaction-hu-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "interaction-hu",
+    "storage_bucket": "interaction-hu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:100956213682:android:956fc5aeb29650b10cd4ab",
+        "android_client_info": {
+          "package_name": "com.app.interaction_hub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "100956213682-stnvu1ln34uafv7sn0mnlktn4b2kltdp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgmNKvQn0uKKOsmFQuQ2t0IBK56UzpYKs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "100956213682-stnvu1ln34uafv7sn0mnlktn4b2kltdp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
