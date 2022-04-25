@@ -4,7 +4,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:interaction_hub/constants/Constants.dart';
 import 'package:interaction_hub/model/timetable_model.dart';
 
-import '../view/global_dailog.dart';
+import '../view/student_view/global_dailog.dart';
 
 class TimetableControllers {
   static Future getTimetable(

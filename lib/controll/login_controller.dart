@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:interaction_hub/constants/Constants.dart';
 import 'package:interaction_hub/model/loginUserModel.dart';
-import 'package:interaction_hub/view/teacher_home_screen.dart';
+import 'package:interaction_hub/view/teacher_view/teacher_home_screen.dart';
 
-import '../view/student_home_screen.dart';
-import '../view/global_dailog.dart';
+import '../view/student_view/student_home_screen.dart';
+import '../view/student_view/global_dailog.dart';
 
 class Controllers {
   static Future loginController(

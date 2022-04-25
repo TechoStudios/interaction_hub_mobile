@@ -6,9 +6,9 @@ import 'package:get_storage/get_storage.dart';
 import 'package:interaction_hub/constants/Constants.dart';
 import 'package:interaction_hub/controll/login_controller.dart';
 import 'package:interaction_hub/controll/news_controller.dart';
-import 'package:interaction_hub/view/student_home_screen.dart';
+import 'package:interaction_hub/view/student_view/student_home_screen.dart';
 import 'package:interaction_hub/view/login_screen.dart';
-import 'package:interaction_hub/view/teacher_home_screen.dart';
+import 'package:interaction_hub/view/teacher_view/teacher_home_screen.dart';
 
 import 'model/loginUserModel.dart';
 import 'model/teacher_model.dart';

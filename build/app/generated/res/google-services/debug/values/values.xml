@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">100956213682-stnvu1ln34uafv7sn0mnlktn4b2kltdp.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://interaction-hu-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+    <string name="gcm_defaultSenderId" translatable="false">100956213682</string>
+    <string name="google_api_key" translatable="false">AIzaSyCgmNKvQn0uKKOsmFQuQ2t0IBK56UzpYKs</string>
+    <string name="google_app_id" translatable="false">1:100956213682:android:956fc5aeb29650b10cd4ab</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCgmNKvQn0uKKOsmFQuQ2t0IBK56UzpYKs</string>
+    <string name="google_storage_bucket" translatable="false">interaction-hu.appspot.com</string>
+    <string name="project_id" translatable="false">interaction-hu</string>
+</resources>

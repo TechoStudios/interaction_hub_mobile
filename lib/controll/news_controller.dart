@@ -5,7 +5,7 @@ import 'package:interaction_hub/constants/Constants.dart';
 import 'package:interaction_hub/model/loginUserModel.dart';
 import 'package:interaction_hub/model/new_model.dart';
 
-import '../view/global_dailog.dart';
+import '../view/student_view/global_dailog.dart';
 
 class NewsControllers {
   static Future getNews() async {

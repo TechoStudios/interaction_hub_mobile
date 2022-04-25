@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:interaction_hub/constants/Constants.dart';
 import 'package:interaction_hub/model/course_model.dart';
-import '../view/global_dailog.dart';
+import '../view/student_view/global_dailog.dart';
 
 class CoursesControllers {
   static Future getCourses(

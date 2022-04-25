@@ -1,7 +1,7 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:interaction_hub/controll/login_controller.dart';
-import 'package:interaction_hub/view/student_home_screen.dart';
+import 'package:interaction_hub/view/student_view/student_home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
