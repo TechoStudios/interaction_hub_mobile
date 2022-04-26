@@ -8,10 +8,13 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:http/http.dart' as http;
 import 'package:interaction_hub/view/teacher_view/send_push_notification_screen.dart';
+import 'package:interaction_hub/view/teacher_view/teacher_groups_screen.dart';
 import 'package:interaction_hub/view/teacher_view/teacher_feedback_screen.dart';
 import '../../constants/Constants.dart';
+import '../../controll/timetable_controller.dart';
 import '../../model/teacher_model.dart';
 import '../student_view/global_dailog.dart';
+import '../timetable_screen.dart';
 
 class TeacherHomePage extends StatefulWidget {
   const TeacherHomePage({Key? key}) : super(key: key);
@@ -163,7 +166,12 @@ class _TeacherHomePageState extends State<TeacherHomePage> {
                       Column(
                         children: [
                           GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => GroupChatPage()));
+                            },
                             child: Card(
                               color: Colors.transparent,
                               elevation: 2,
@@ -196,7 +204,10 @@ class _TeacherHomePageState extends State<TeacherHomePage> {
                       Column(
                         children: [
                           GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              TimetableControllers.getTeacherTimetable(
+                                  Constants.loginTeacher[0].id, context);
+                            },
                             child: Card(
                               color: Colors.transparent,
                               elevation: 2,

@@ -6,17 +6,17 @@ import 'package:flutter/material.dart';
 import 'package:interaction_hub/constants/Constants.dart';
 import 'package:interaction_hub/controll/chat_cotroller.dart';
 
-class GroupChat extends StatefulWidget {
+class StudentGroupChat extends StatefulWidget {
   final String groupChatRoomId;
   final String groupName;
 
-  GroupChat(this.groupChatRoomId, this.groupName);
+  StudentGroupChat(this.groupChatRoomId, this.groupName);
 
   @override
-  _GroupChatState createState() => _GroupChatState();
+  _StudentGroupChatState createState() => _StudentGroupChatState();
 }
 
-class _GroupChatState extends State<GroupChat> {
+class _StudentGroupChatState extends State<StudentGroupChat> {
   ScrollController controller = new ScrollController();
   Stream<QuerySnapshot>? chats;
   TextEditingController messageEditingController = new TextEditingController();

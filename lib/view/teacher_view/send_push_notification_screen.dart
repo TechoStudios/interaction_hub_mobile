@@ -87,16 +87,8 @@ class _SendNotificationPageState extends State<SendNotificationPage> {
         );
         EasyLoading.showSuccess("Message send successfully.");
       } catch (e) {
-        EasyLoading.dismiss();
-        showDialog(
-            context: context,
-            builder: (BuildContext context) => showPopUpDailog(
-                  function: () {
-                    Navigator.pop(context);
-                  },
-                  title: "Alert",
-                  contaxt: 'Some thing went wrong ! try again.',
-                ));
+        EasyLoading.showError("Some thing went wrong ! try again.");
+
         print("error push notification");
       }
     }
@@ -223,14 +215,12 @@ class _SendNotificationPageState extends State<SendNotificationPage> {
                                     color: Colors.blue,
                                   ),
                                   maxLines: 1),
-                              items: Constants.allStudents
-                                  .map((StudentModel value) {
+                              items: ["1", "2", "3", "4", "5", "6", "7", "8"]
+                                  .map((String value) {
                                 return DropdownMenuItem<String>(
-                                  value: value.semester,
+                                  value: value,
                                   child: Text(
-                                    value.semester.isEmpty
-                                        ? ""
-                                        : value.semester,
+                                    value.isEmpty ? "" : value,
                                     textAlign: TextAlign.left,
                                     overflow: TextOverflow.ellipsis,
                                     maxLines: 1,

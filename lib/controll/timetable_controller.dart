@@ -5,9 +5,10 @@ import 'package:interaction_hub/constants/Constants.dart';
 import 'package:interaction_hub/model/timetable_model.dart';
 
 import '../view/student_view/global_dailog.dart';
+import '../view/timetable_screen.dart';
 
 class TimetableControllers {
-  static Future getTimetable(
+  static Future getStudentTimetable(
       String department, semester, section, BuildContext context) async {
     if (Constants.timetable.isNotEmpty) {
       Constants.timetable.clear();
@@ -46,8 +47,66 @@ class TimetableControllers {
               ));
             });
           });
-          EasyLoading.showSuccess("success.");
         }
+        EasyLoading.showSuccess("success.");
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => TimeTablePage()));
+      } else {
+        EasyLoading.dismiss();
+        showDialog(
+            context: context,
+            builder: (BuildContext context) => showPopUpDailog(
+                  function: () {
+                    Navigator.pop(context);
+                  },
+                  title: "Alert",
+                  contaxt: 'SomeThing went Wrong',
+                ));
+      }
+    });
+  }
+
+  static Future getTeacherTimetable(
+      String teacherID, BuildContext context) async {
+    if (Constants.timetable.isNotEmpty) {
+      Constants.timetable.clear();
+    }
+    EasyLoading.show(status: "Please Wait...");
+    await FirebaseFirestore.instance
+        .collection('TimeTable')
+        .where('teacherID', isEqualTo: teacherID)
+        .get()
+        .then((value) async {
+      if (value.docs.isNotEmpty) {
+        for (var data in value.docs) {
+          await FirebaseFirestore.instance
+              .collection("Courses")
+              .doc(data['courseID'])
+              .get()
+              .then((value2) async {
+            await FirebaseFirestore.instance
+                .collection("Accounts")
+                .doc(data["teacherID"])
+                .get()
+                .then((value3) {
+              Constants.timetable.add(timetableModel(
+                data.id,
+                data['Day'].toString(),
+                value2['title'].toString(),
+                data['department'].toString(),
+                data['lectureHall'].toString(),
+                data['section'].toString(),
+                data['semester'].toString(),
+                value3['name'].toString(),
+                data['timeEnd'].toString(),
+                data['timeStart'].toString(),
+              ));
+            });
+          });
+        }
+        EasyLoading.showSuccess("success.");
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => TimeTablePage()));
       } else {
         EasyLoading.dismiss();
         showDialog(

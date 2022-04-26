@@ -79,9 +79,25 @@ class _TimeTablePageState extends State<TimeTablePage> {
                                           ),
                                           Text(Constants
                                               .timetable[index].courseTitle),
-                                          Text("Teacher Name  " +
-                                              Constants.timetable[index]
-                                                  .teacherName),
+                                          Constants.loginTeacher.isEmpty
+                                              ? Text("Teacher Name  " +
+                                                  Constants.timetable[index]
+                                                      .teacherName)
+                                              : Row(
+                                                  children: [
+                                                    Text("Semester  " +
+                                                        Constants
+                                                            .timetable[index]
+                                                            .semester),
+                                                    const SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    Text("Department  " +
+                                                        Constants
+                                                            .timetable[index]
+                                                            .department),
+                                                  ],
+                                                ),
                                           Text("Room No  " +
                                               Constants.timetable[index]
                                                   .lectureHall),
@@ -145,9 +161,25 @@ class _TimeTablePageState extends State<TimeTablePage> {
                                           ),
                                           Text(Constants
                                               .timetable[index].courseTitle),
-                                          Text("Teacher Name  " +
-                                              Constants.timetable[index]
-                                                  .teacherName),
+                                          Constants.loginTeacher.isEmpty
+                                              ? Text("Teacher Name  " +
+                                                  Constants.timetable[index]
+                                                      .teacherName)
+                                              : Row(
+                                                  children: [
+                                                    Text("Semester  " +
+                                                        Constants
+                                                            .timetable[index]
+                                                            .semester),
+                                                    const SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    Text("Department  " +
+                                                        Constants
+                                                            .timetable[index]
+                                                            .department),
+                                                  ],
+                                                ),
                                           Text("Room No  " +
                                               Constants.timetable[index]
                                                   .lectureHall),
@@ -212,9 +244,25 @@ class _TimeTablePageState extends State<TimeTablePage> {
                                           Text(Constants
                                               .timetable[index].courseTitle
                                               .toUpperCase()),
-                                          Text("Teacher Name  " +
-                                              Constants.timetable[index]
-                                                  .teacherName),
+                                          Constants.loginTeacher.isEmpty
+                                              ? Text("Teacher Name  " +
+                                                  Constants.timetable[index]
+                                                      .teacherName)
+                                              : Row(
+                                                  children: [
+                                                    Text("Semester  " +
+                                                        Constants
+                                                            .timetable[index]
+                                                            .semester),
+                                                    const SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    Text("Department  " +
+                                                        Constants
+                                                            .timetable[index]
+                                                            .department),
+                                                  ],
+                                                ),
                                           Text("Room No  " +
                                               Constants.timetable[index]
                                                   .lectureHall),
@@ -279,9 +327,25 @@ class _TimeTablePageState extends State<TimeTablePage> {
                                           Text(Constants
                                               .timetable[index].courseTitle
                                               .toUpperCase()),
-                                          Text("Teacher Name  " +
-                                              Constants.timetable[index]
-                                                  .teacherName),
+                                          Constants.loginTeacher.isEmpty
+                                              ? Text("Teacher Name  " +
+                                                  Constants.timetable[index]
+                                                      .teacherName)
+                                              : Row(
+                                                  children: [
+                                                    Text("Semester  " +
+                                                        Constants
+                                                            .timetable[index]
+                                                            .semester),
+                                                    const SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    Text("Department  " +
+                                                        Constants
+                                                            .timetable[index]
+                                                            .department),
+                                                  ],
+                                                ),
                                           Text("Room No  " +
                                               Constants.timetable[index]
                                                   .lectureHall),
@@ -346,9 +410,25 @@ class _TimeTablePageState extends State<TimeTablePage> {
                                           Text(Constants
                                               .timetable[index].courseTitle
                                               .toUpperCase()),
-                                          Text("Teacher Name  " +
-                                              Constants.timetable[index]
-                                                  .teacherName),
+                                          Constants.loginTeacher.isEmpty
+                                              ? Text("Teacher Name  " +
+                                                  Constants.timetable[index]
+                                                      .teacherName)
+                                              : Row(
+                                                  children: [
+                                                    Text("Semester  " +
+                                                        Constants
+                                                            .timetable[index]
+                                                            .semester),
+                                                    const SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    Text("Department  " +
+                                                        Constants
+                                                            .timetable[index]
+                                                            .department),
+                                                  ],
+                                                ),
                                           Text("Room No  " +
                                               Constants.timetable[index]
                                                   .lectureHall),
@@ -413,9 +493,25 @@ class _TimeTablePageState extends State<TimeTablePage> {
                                           Text(Constants
                                               .timetable[index].courseTitle
                                               .toUpperCase()),
-                                          Text("Teacher Name  " +
-                                              Constants.timetable[index]
-                                                  .teacherName),
+                                          Constants.loginTeacher.isEmpty
+                                              ? Text("Teacher Name  " +
+                                                  Constants.timetable[index]
+                                                      .teacherName)
+                                              : Row(
+                                                  children: [
+                                                    Text("Semester  " +
+                                                        Constants
+                                                            .timetable[index]
+                                                            .semester),
+                                                    const SizedBox(
+                                                      width: 5,
+                                                    ),
+                                                    Text("Department  " +
+                                                        Constants
+                                                            .timetable[index]
+                                                            .department),
+                                                  ],
+                                                ),
                                           Text("Room No  " +
                                               Constants.timetable[index]
                                                   .lectureHall),

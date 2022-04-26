@@ -8,6 +8,7 @@ import 'package:interaction_hub/controll/timetable_controller.dart';
 import 'package:interaction_hub/view/student_view/chat.dart';
 import 'package:interaction_hub/view/student_view/feedback_screen.dart';
 import 'package:interaction_hub/view/student_view/my_courses_screen.dart';
+import 'package:interaction_hub/view/student_view/student_chat_groups_screen.dart';
 import 'package:interaction_hub/view/timetable_screen.dart';
 import 'package:marquee/marquee.dart';
 
@@ -163,48 +164,48 @@ class _MyHomePageState extends State<StudentHomePage> {
                 ),
 
                 ///news section
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Padding(
-                      padding: EdgeInsets.only(left: 5.0),
-                      child: Text(
+                Padding(
+                  padding: const EdgeInsets.only(left: 20, right: 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
                         "Latest News",
                         style: TextStyle(
                             fontSize: 20,
                             color: Colors.red,
                             fontWeight: FontWeight.w500),
                       ),
-                    ),
-                    Card(
-                      color: Colors.transparent,
-                      elevation: 2,
-                      child: Container(
-                          width: size.width - 30,
-                          height: 50,
-                          decoration: const BoxDecoration(
-                              // border: Border.all(width: 3, color: Colors.white),
-                              ),
-                          child: Marquee(
-                            text: Constants.news[0].news,
-                            style: const TextStyle(
-                                fontSize: 16,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w400),
-                            scrollAxis: Axis.horizontal,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            blankSpace: 15.0,
-                            velocity: 100.0,
-                            pauseAfterRound: const Duration(seconds: 1),
-                            startPadding: 10.0,
-                            accelerationDuration: const Duration(seconds: 1),
-                            accelerationCurve: Curves.linear,
-                            decelerationDuration:
-                                const Duration(milliseconds: 500),
-                            decelerationCurve: Curves.easeOut,
-                          )),
-                    ),
-                  ],
+                      Card(
+                        color: Colors.transparent,
+                        elevation: 2,
+                        child: Container(
+                            width: size.width,
+                            height: 50,
+                            decoration: const BoxDecoration(
+                                // border: Border.all(width: 3, color: Colors.white),
+                                ),
+                            child: Marquee(
+                              text: Constants.news[0].news,
+                              style: const TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w400),
+                              scrollAxis: Axis.horizontal,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              blankSpace: 15.0,
+                              velocity: 100.0,
+                              pauseAfterRound: const Duration(seconds: 1),
+                              startPadding: 10.0,
+                              accelerationDuration: const Duration(seconds: 1),
+                              accelerationCurve: Curves.linear,
+                              decelerationDuration:
+                                  const Duration(milliseconds: 500),
+                              decelerationCurve: Curves.easeOut,
+                            )),
+                      ),
+                    ],
+                  ),
                 ),
                 const SizedBox(
                   height: 30,
@@ -321,15 +322,8 @@ class _MyHomePageState extends State<StudentHomePage> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => GroupChat(
-                                          Constants.courseName
-                                                  .replaceAll(" ", "") +
-                                              Constants
-                                                  .loginStudent[0].semester,
-                                          Constants.courseName
-                                                  .replaceAll(" ", "") +
-                                              Constants
-                                                  .loginStudent[0].semester)));
+                                      builder: (context) =>
+                                          StudentGroupPage()));
                             },
                             child: Card(
                               color: Colors.transparent,
@@ -364,18 +358,11 @@ class _MyHomePageState extends State<StudentHomePage> {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              TimetableControllers.getTimetable(
-                                      Constants.loginStudent[0].department,
-                                      Constants.loginStudent[0].semester,
-                                      Constants.loginStudent[0].section,
-                                      context)
-                                  .then((value) {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => TimeTablePage()));
-                                print(Constants.timetable[1].lectureHall);
-                              });
+                              TimetableControllers.getStudentTimetable(
+                                  Constants.loginStudent[0].department,
+                                  Constants.loginStudent[0].semester,
+                                  Constants.loginStudent[0].section,
+                                  context);
                             },
                             child: Card(
                               color: Colors.transparent,
