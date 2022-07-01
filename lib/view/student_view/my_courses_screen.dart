@@ -99,7 +99,7 @@ class _MyCoursesState extends State<MyCourses> {
                             child: Row(
                               children: [
                                 const Text(
-                                  "Credit Hours : ",
+                                  "Cdt Hours : ",
                                   style: const TextStyle(fontSize: 18),
                                 ),
                                 Text(
@@ -112,7 +112,7 @@ class _MyCoursesState extends State<MyCourses> {
                           Row(
                             children: [
                               const Text(
-                                "Department : ",
+                                "Dep: ",
                                 style: TextStyle(fontSize: 18),
                               ),
                               Text(

@@ -79,14 +79,187 @@ class _TeacherFeedbackPageState extends State<TeacherFeedbackPage> {
                                       elevation: 2,
                                       child: Padding(
                                         padding: const EdgeInsets.all(15.0),
-                                        child: Text(
-                                          snapshot.data!.docs[index]
-                                              .data()["message"],
-                                          textAlign: TextAlign.justify,
-                                          style: const TextStyle(
-                                              fontSize: 16,
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.w400),
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            ///fb1
+                                            Text(
+                                              snapshot.data!.docs[index]
+                                                  .data()["fb1"][0],
+                                              textAlign: TextAlign.justify,
+                                              style: const TextStyle(
+                                                  fontSize: 16,
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.w400),
+                                            ),
+                                            const SizedBox(
+                                              height: 10,
+                                            ),
+                                            Container(
+                                              color: Colors.grey,
+                                              child: Padding(
+                                                padding:
+                                                    const EdgeInsets.all(5.0),
+                                                child: Text(
+                                                  snapshot.data!.docs[index]
+                                                      .data()["fb1"][1]
+                                                      .toString()
+                                                      .toUpperCase(),
+                                                  textAlign: TextAlign.justify,
+                                                  style: const TextStyle(
+                                                      fontSize: 16,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.w400),
+                                                ),
+                                              ),
+                                            ),
+
+                                            ///fb2
+                                            const SizedBox(
+                                              height: 10,
+                                            ),
+                                            Text(
+                                              snapshot.data!.docs[index]
+                                                  .data()["fb2"][0],
+                                              textAlign: TextAlign.justify,
+                                              style: const TextStyle(
+                                                  fontSize: 16,
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.w400),
+                                            ),
+                                            const SizedBox(
+                                              height: 10,
+                                            ),
+                                            Container(
+                                              color: Colors.grey,
+                                              child: Padding(
+                                                padding:
+                                                    const EdgeInsets.all(5.0),
+                                                child: Text(
+                                                  snapshot.data!.docs[index]
+                                                      .data()["fb2"][1]
+                                                      .toString()
+                                                      .toUpperCase(),
+                                                  textAlign: TextAlign.justify,
+                                                  style: const TextStyle(
+                                                      fontSize: 16,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.w400),
+                                                ),
+                                              ),
+                                            ),
+
+                                            ///fb3
+                                            const SizedBox(
+                                              height: 10,
+                                            ),
+                                            Text(
+                                              snapshot.data!.docs[index]
+                                                  .data()["fb3"][0],
+                                              textAlign: TextAlign.justify,
+                                              style: const TextStyle(
+                                                  fontSize: 16,
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.w400),
+                                            ),
+                                            const SizedBox(
+                                              height: 10,
+                                            ),
+                                            Container(
+                                              color: Colors.grey,
+                                              child: Padding(
+                                                padding:
+                                                    const EdgeInsets.all(5.0),
+                                                child: Text(
+                                                  snapshot.data!.docs[index]
+                                                      .data()["fb3"][1]
+                                                      .toString()
+                                                      .toUpperCase(),
+                                                  textAlign: TextAlign.justify,
+                                                  style: const TextStyle(
+                                                      fontSize: 16,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.w400),
+                                                ),
+                                              ),
+                                            ),
+
+                                            ///fb4
+                                            const SizedBox(
+                                              height: 10,
+                                            ),
+                                            Text(
+                                              snapshot.data!.docs[index]
+                                                  .data()["fb4"][0],
+                                              textAlign: TextAlign.justify,
+                                              style: const TextStyle(
+                                                  fontSize: 16,
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.w400),
+                                            ),
+                                            const SizedBox(
+                                              height: 10,
+                                            ),
+                                            Container(
+                                              color: Colors.grey,
+                                              child: Padding(
+                                                padding:
+                                                    const EdgeInsets.all(5.0),
+                                                child: Text(
+                                                  snapshot.data!.docs[index]
+                                                      .data()["fb4"][1]
+                                                      .toString()
+                                                      .toUpperCase(),
+                                                  textAlign: TextAlign.justify,
+                                                  style: const TextStyle(
+                                                      fontSize: 16,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.w400),
+                                                ),
+                                              ),
+                                            ),
+
+                                            ///fb5
+                                            const SizedBox(
+                                              height: 10,
+                                            ),
+                                            Text(
+                                              snapshot.data!.docs[index]
+                                                  .data()["fb5"][0],
+                                              textAlign: TextAlign.justify,
+                                              style: const TextStyle(
+                                                  fontSize: 16,
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.w400),
+                                            ),
+                                            const SizedBox(
+                                              height: 10,
+                                            ),
+                                            Container(
+                                              color: Colors.grey,
+                                              child: Padding(
+                                                padding:
+                                                    const EdgeInsets.all(5.0),
+                                                child: Text(
+                                                  snapshot.data!.docs[index]
+                                                      .data()["fb5"][1]
+                                                      .toString()
+                                                      .toUpperCase(),
+                                                  textAlign: TextAlign.justify,
+                                                  style: const TextStyle(
+                                                      fontSize: 16,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.w400),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
                                         ),
                                       ),
                                     );

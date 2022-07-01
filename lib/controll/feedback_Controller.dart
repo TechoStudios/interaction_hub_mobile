@@ -31,11 +31,18 @@ class feedbackController {
     });
   }
 
-  static Future setFeedback(String id, message) async {
+  static Future setFeedback(
+      String id, q1, ans1, q2, ans2, q3, ans3, q4, ans4, q5, ans5) async {
     EasyLoading.show(status: "Please Wait...");
-    await FirebaseFirestore.instance
-        .collection("Feedbacks")
-        .add({"teacherID": id, "message": message, "dateTime": DateTime.now()});
+    await FirebaseFirestore.instance.collection("Feedbacks").add({
+      "teacherID": id,
+      "fb1": FieldValue.arrayUnion([q1, ans1]),
+      "fb2": FieldValue.arrayUnion([q2, ans2]),
+      "fb3": FieldValue.arrayUnion([q3, ans3]),
+      "fb4": FieldValue.arrayUnion([q4, ans4]),
+      "fb5": FieldValue.arrayUnion([q5, ans5]),
+      "dateTime": DateTime.now()
+    });
     EasyLoading.showSuccess("Feedback submitted.");
   }
 
@@ -43,6 +50,8 @@ class feedbackController {
     await FirebaseFirestore.instance
         .collection("Accounts")
         .where("role", isEqualTo: "teacher")
+        .where("department", isEqualTo: Constants.loginStudent[0].department)
+        .where("semester", isEqualTo: Constants.loginStudent[0].semester)
         .get()
         .then((value) {
       if (value.docs.isNotEmpty) {
